@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Customer;
+use App\Livewire\Order;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ use App\Livewire\Customer;
 Route::view('/', 'welcome');
 
 Route::get('/customer', Customer::class)->name('customer');
+Route::get('/order', Order::class)->name('order');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
